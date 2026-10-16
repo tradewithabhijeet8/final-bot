@@ -1,0 +1,19 @@
+# BTC Paper-Trading Terminal - runtime dependencies
+# Written for Python 3.12 compatibility; verified by running the full
+# test suite on Python 3.13.16 (the build environment). No 3.13-only
+# syntax is used, but 3.12 itself was not executed here.
+# Install with:  python -m pip install -r requirements.txt
+#
+# streamlit >= 1.49 is required: the UI uses the modern `width="stretch"`
+# argument instead of the deprecated `use_container_width`, whose removal date
+# has already passed.
+
+streamlit>=1.49,<2.0
+ccxt>=4.3.0
+pandas>=2.0,<3.0
+numpy>=1.26,<3.0
+plotly>=5.20,<7.0
+
+# Testing only. Harmless in production; Streamlit Cloud will simply install it.
+# Remove this line if you want a minimal production install.
+pytest>=8.0
